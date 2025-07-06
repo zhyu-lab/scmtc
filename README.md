@@ -38,6 +38,8 @@ python -m pip install -r requirements.txt
 
 # Usage
 
+## Get cell embeddings
+
 The train.py is used to train the model and get cell embeddings and predicted cluster labels.
 
 Example:
@@ -45,6 +47,15 @@ Example:
 ```bash
 tar -zxvf data/A_500k.tar.gz
 python train.py --input A_500k.txt --output data --resolution 0.1
+```
+
+## Call CNAs
+The functions for calling CNAs are implemented in MATLAB.
+
+Example:
+
+```bash
+callcnas('../data/A_500k.txt','../data/embeddings.txt','../data',10,10)
 ```
 
 # Contact
